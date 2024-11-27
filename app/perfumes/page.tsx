@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from  'next/image';
 
 const Perfumes = () => {
   const perfumeData = [
@@ -13,7 +14,7 @@ const Perfumes = () => {
     <div className='perfumes grid grid-cols-1 md:grid-cols-3 gap-10 px-10 my-10'>
         {perfumeData.map(perfume => (
           <div key={perfume.id} className='perfume-card bg-pink-200 p-5 rounded-md shadow-md text-center'>
-            <img src={perfume.image} alt={perfume.name} className='w-full rounded-md transition-transform duration-300 transform hover:scale-110' />
+            <Image src={perfume.image} alt={perfume.name} className='w-full rounded-md transition-transform duration-300 transform hover:scale-110' />
             <h3 className='mt-4 text-2xl font-bold'>{perfume.name}</h3>
             <p className='text-gray-600'>{perfume.description}</p>
             <div className='price text-pink-400 ext-xl font-semibold mt-2'>${perfume.price}</div>
